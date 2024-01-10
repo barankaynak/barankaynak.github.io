@@ -1,0 +1,35 @@
+main:
+  - title: UZEP: A Cloud-Based Distance Education Platform for Higher Education Institutions Learning
+    authors: <strong>Baran Kaynak</strong>, Osman Tuna, Ugur Ozbek, Ali Aksoy, Ahmet Ozmen, Mehmet Baris Horzum, Burak Gol
+    year: 2023
+    journal: Turkish Online Journal of Distance Education
+    doi: 10.17718/tojde.1188032
+    keywords: Distance Education, Internet Based Online Learning, Online Assessment, Educational Technology, Covid-19
+
+  - title: Open Data and Big Data Applications For Higher Education and Possible Outcomes
+    authors: Sümeyye Kaynak, <strong>Baran Kaynak</strong>, Ahmet Özmen
+    year: 2023
+    journal: Mugla Journal of Science and Technology
+    doi: 10.22531/muglajsci.1201726
+    keywords: Open Data, Big Data, Higher Education
+
+  - title: GPU-Based Dynamic Solar Potential Estimation Tool Using 3D Plans
+    authors: Sümeyye Kaynak, <strong>Baran Kaynak</strong>, Ahmet Özmen
+    year: 2020
+    journal: IEEE Access
+    doi: 10.1109/ACCESS.2020.2978590
+    keywords: Solar potential analysis, GPU, 3D City Model
+
+  - title: Cloud manufacturing architecture based on public blockchain technology
+    authors: <strong>Baran Kaynak</strong>, Sümeyye Kaynak, Özer Uygun
+    year: 2019
+    journal: IEEE Access
+    doi: 10.1109/ACCESS.2019.2962232
+    keywords: Blockchain, Cloud Manufacturing, Decentralized Manufacturing
+
+  - title: A software tool development study for solar energy potential analysis
+    authors: Sümeyye Kaynak, <strong>Baran Kaynak</strong>, Ahmet Özmen
+    year: 2018
+    journal: Energy and Buildings
+    doi: 10.1016/j.enbuild.2017.12.033
+    keywords: 3D City Model, Shading Condition, Solar Potential Analysis
