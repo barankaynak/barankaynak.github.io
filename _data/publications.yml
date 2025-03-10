@@ -1,35 +1,57 @@
 main:
-  - title: "UZEP A Cloud-Based Distance Education Platform for Higher Education Institutions Learning"
+  - title: "HydroSignal: Open-Source Internet of Things Information Communication Platform for Hydrological Education and Outreach"
+    authors: <strong>Baran Kaynak</strong>, Omer Mermer, Muhammed Yusuf Sermet, Ibrahim Demir
+    year: 2025
+    journal: Environmental Monitoring and Assessment
+    doi: 10.1007/s10661-025-13812-1
+    keywords: Hydrological Monitoring, Internet of Things, Environmental Data, Real-Time Monitoring, STEM Education, Data Visualization
+
+  - title: "Geo-WC: Custom Web Components for Earth Science Organizations and Agencies"
+    authors: Sümeyye Kaynak, <strong>Baran Kaynak</strong>, Carlos Erazo Ramirez, Ibrahim Demir
+    year: 2025
+    journal: Environmental Modelling & Software
+    doi: 10.1016/j.envsoft.2025.106328
+    keywords: Web Components, Environmental Science, HTML, Web Applications, Hydrology, Hydroinformatics, Government Agencies
+
+  - title: "A Hybrid Decision Support System for the Resource Allocation Problem in Cloud Manufacturing Platforms"
+    authors: Sümeyye Kaynak, <strong>Baran Kaynak</strong>, Özer Uygun
+    year: 2024
+    journal: Arabian Journal for Science and Engineering
+    doi: 10.1007/s13369-024-09641-y
+    keywords: Cloud Manufacturing, AHP, Genetic Algorithm, Resource Allocation, Resource Selection
+
+  - title: "UZEP: A Cloud-Based Distance Education Platform for Higher Education Institutions Learning"
     authors: <strong>Baran Kaynak</strong>, Osman Tuna, Ugur Ozbek, Ali Aksoy, Ahmet Ozmen, Mehmet Baris Horzum, Burak Gol
     year: 2023
     journal: Turkish Online Journal of Distance Education
     doi: 10.17718/tojde.1188032
     keywords: Distance Education, Internet Based Online Learning, Online Assessment, Educational Technology, Covid-19
 
-  - title: Open Data and Big Data Applications For Higher Education and Possible Outcomes
+  - title: "Open Data and Big Data Applications For Higher Education and Possible Outcomes"
     authors: Sümeyye Kaynak, <strong>Baran Kaynak</strong>, Ahmet Özmen
     year: 2023
     journal: Mugla Journal of Science and Technology
     doi: 10.22531/muglajsci.1201726
     keywords: Open Data, Big Data, Higher Education
 
-  - title: GPU-Based Dynamic Solar Potential Estimation Tool Using 3D Plans
+  - title: "GPU-Based Dynamic Solar Potential Estimation Tool Using 3D Plans"
     authors: Sümeyye Kaynak, <strong>Baran Kaynak</strong>, Ahmet Özmen
     year: 2020
     journal: IEEE Access
     doi: 10.1109/ACCESS.2020.2978590
     keywords: Solar potential analysis, GPU, 3D City Model
 
-  - title: Cloud manufacturing architecture based on public blockchain technology
+  - title: "Cloud manufacturing architecture based on public blockchain technology"
     authors: <strong>Baran Kaynak</strong>, Sümeyye Kaynak, Özer Uygun
     year: 2019
     journal: IEEE Access
     doi: 10.1109/ACCESS.2019.2962232
     keywords: Blockchain, Cloud Manufacturing, Decentralized Manufacturing
 
-  - title: A software tool development study for solar energy potential analysis
+  - title: "A software tool development study for solar energy potential analysis"
     authors: Sümeyye Kaynak, <strong>Baran Kaynak</strong>, Ahmet Özmen
     year: 2018
     journal: Energy and Buildings
     doi: 10.1016/j.enbuild.2017.12.033
     keywords: 3D City Model, Shading Condition, Solar Potential Analysis
+
