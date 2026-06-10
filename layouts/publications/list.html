@@ -83,6 +83,7 @@ html.dark .btn-cite { background: #374151; color: #d1d5db; }
 
   {{ $journals    := where .Pages "Params.publication_types" "intersect" (slice "article-journal") }}
   {{ $conferences := where .Pages "Params.publication_types" "intersect" (slice "paper-conference") }}
+  {{ $chapters    := where .Pages "Params.publication_types" "intersect" (slice "book-chapter") }}
 
   {{ if $journals }}
   <section class="pub-section">
@@ -99,6 +100,17 @@ html.dark .btn-cite { background: #374151; color: #d1d5db; }
   <section class="pub-section">
     <h2 class="pub-section-title">Conference Papers <span class="pub-section-count">({{ len $conferences }})</span></h2>
     {{ $sorted := sort $conferences "Date" "desc" }}
+    {{ $total  := len $sorted }}
+    {{ range $i, $p := $sorted }}
+      {{ template "pub-entry" (dict "p" $p "num" (sub $total $i)) }}
+    {{ end }}
+  </section>
+  {{ end }}
+
+  {{ if $chapters }}
+  <section class="pub-section">
+    <h2 class="pub-section-title">Book Chapters <span class="pub-section-count">({{ len $chapters }})</span></h2>
+    {{ $sorted := sort $chapters "Date" "desc" }}
     {{ $total  := len $sorted }}
     {{ range $i, $p := $sorted }}
       {{ template "pub-entry" (dict "p" $p "num" (sub $total $i)) }}
