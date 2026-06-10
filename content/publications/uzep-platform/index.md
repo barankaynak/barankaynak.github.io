@@ -13,6 +13,7 @@ publishDate: "2023-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "Turkish Online Journal of Distance Education"
+doi: "10.17718/tojde.1188032"
 featured: false
 tags:
   - Distance Education
@@ -20,7 +21,4 @@ tags:
   - Online Assessment
   - Educational Technology
   - Covid-19
-links:
-  - type: doi
-    url: https://doi.org/10.17718/tojde.1188032
 ---

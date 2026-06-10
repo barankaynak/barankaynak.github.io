@@ -9,12 +9,10 @@ publishDate: "2020-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "IEEE Access"
+doi: "10.1109/ACCESS.2020.2978590"
 featured: false
 tags:
   - Solar Potential Analysis
   - GPU
   - 3D City Model
-links:
-  - type: doi
-    url: https://doi.org/10.1109/ACCESS.2020.2978590
 ---

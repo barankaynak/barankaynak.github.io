@@ -10,13 +10,11 @@ publishDate: "2025-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "Environmental Modelling & Software"
+doi: "10.1016/j.envsoft.2025.106328"
 featured: false
 tags:
   - Web Components
   - Environmental Science
   - Hydrology
   - Hydroinformatics
-links:
-  - type: doi
-    url: https://doi.org/10.1016/j.envsoft.2025.106328
 ---

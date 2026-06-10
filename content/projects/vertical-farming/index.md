@@ -8,7 +8,9 @@ tags:
   - Decision Support System
   - Agriculture
   - IoT
-external_link: https://www.plantdergisi.com/yazi-sus-bitkisi-uretiminde-cevre-kontrollu-dikey-tarim-ve-bir-karar-destek-sistemi-uygulamasi-hibrit-afrika-meneksesi-ornegi-480.html
+links:
+  - type: site
+    url: https://www.plantdergisi.com/yazi-sus-bitkisi-uretiminde-cevre-kontrollu-dikey-tarim-ve-bir-karar-destek-sistemi-uygulamasi-hibrit-afrika-meneksesi-ornegi-480.html
 ---
 
 **Funding Source:** Ministry of Agriculture of Turkey

@@ -9,13 +9,11 @@ publishDate: "2024-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "Arabian Journal for Science and Engineering"
+doi: "10.1007/s13369-024-09641-y"
 featured: false
 tags:
   - Cloud Manufacturing
   - AHP
   - Genetic Algorithm
   - Resource Allocation
-links:
-  - type: doi
-    url: https://doi.org/10.1007/s13369-024-09641-y
 ---

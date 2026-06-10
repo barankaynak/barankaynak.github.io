@@ -8,7 +8,9 @@ tags:
   - Cloud Computing
   - Educational Technology
   - TUBITAK
-external_link: https://uzep.org
+links:
+  - type: site
+    url: https://uzep.org
 ---
 
 **Funding Source:** TUBITAK 1001 (Project No: 120K200)

@@ -9,12 +9,10 @@ publishDate: "2023-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "Mugla Journal of Science and Technology"
+doi: "10.22531/muglajsci.1201726"
 featured: false
 tags:
   - Open Data
   - Big Data
   - Higher Education
-links:
-  - type: doi
-    url: https://doi.org/10.22531/muglajsci.1201726
 ---
