@@ -32,14 +32,16 @@ sections:
       subtitle: ''
       text: |-
         I am an Assistant Professor in the [Department of Information Systems Engineering](https://www.sakarya.edu.tr/)
-        at Sakarya University. Previously, I was a Postdoc Researcher at the
-        [University of Iowa Hydroinformatics Lab](https://hydroinformatics.uiowa.edu/) (2023–2025).
-        My work sits at the intersection of **Hydroinformatics**, **IoT-based environmental monitoring**,
-        and **web technologies for science communication**.
+        at Sakarya University (Faculty of Computer and Information Sciences). Previously, I was a
+        Postdoc Researcher at the [University of Iowa Hydroinformatics Lab](https://hydroinformatics.uiowa.edu/) (2023–2025).
 
-        I develop open-source tools and platforms that make hydrological data more accessible
-        for education and decision-making. I also work on cloud computing architectures and
-        distance education systems.
+        My research spans **Hydroinformatics**, **IoT-based environmental monitoring**, **cloud computing**,
+        and **blockchain technologies**. I build open-source tools and platforms that make hydrological
+        and environmental data accessible for education and decision-making.
+
+        Before academia, I spent a decade as a software developer and system administrator at Sakarya University,
+        designing and operating large-scale university information systems, Kubernetes infrastructure,
+        and the national distance education platform [UZEP](https://uzep.org).
 
         **Full CV with contact details available** — [view protected page](/private/) *(access code required — [request one](mailto:baran@kaynak.me))*
     design:

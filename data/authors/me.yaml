@@ -9,13 +9,16 @@ name:
   pronunciation: ''
   pronouns: ''
 
+postnominals:
+  - PhD
+
 role: Assistant Professor
 bio: |
   I am an Assistant Professor in the Department of Information Systems Engineering
-  at Sakarya University. Previously, I was a Postdoc Researcher at the
-  University of Iowa Hydroinformatics Lab (2023–2025). My research focuses on
-  Hydroinformatics, IoT-based environmental monitoring, cloud computing, and
-  distance education platforms.
+  at Sakarya University (Faculty of Computer and Information Sciences). Previously,
+  I was a Postdoc Researcher at the University of Iowa Hydroinformatics Lab (2023–2025).
+  My research spans Hydroinformatics, IoT-based environmental monitoring, cloud computing,
+  blockchain technologies, and distance education platforms.
 
 affiliations:
   - name: Department of Information Systems Engineering, Sakarya University
@@ -31,34 +34,108 @@ links:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/barankaynak/
     label: LinkedIn
+  - icon: hero/globe-alt
+    url: https://kaynak.me
+    label: Website
 
 interests:
   - Hydroinformatics
   - Internet of Things
   - Cloud Computing
-  - Distance Education
+  - Blockchain Technologies
+  - Enterprise Server Systems
+  - Virtualization & Kubernetes
   - Web Technologies
+  - Distance Education
 
 education:
-  - degree: PhD Computer Engineering
+  - degree: PhD in Industrial Engineering
     institution: Sakarya University
-    end: 2023-01-01
-  - degree: MSc Computer Engineering
+    start: 2013-09-01
+    end: 2021-01-15
+    summary: |
+      Thesis: Blockchain based cloud manufacturing model. GPA: 3.83.
+      Supervisor: Prof. Özer Uygun.
+  - degree: MSc in Industrial Engineering
     institution: Sakarya University
-    end: 2018-01-01
-  - degree: BSc Computer Engineering
+    start: 2011-09-01
+    end: 2013-01-07
+    summary: |
+      Thesis: Integrated service-oriented information structure for use of wireless sensor network in manufacturing logistics. GPA: 3.28.
+  - degree: Erasmus Exchange
+    institution: Umeå University, Sweden
+    start: 2009-09-01
+    end: 2010-06-30
+  - degree: BSc in Industrial Engineering
     institution: Sakarya University
-    end: 2015-01-01
+    start: 2007-09-01
+    end: 2011-09-16
+    summary: GPA: 3.08.
 
 experience:
   - role: Assistant Professor
-    org: Sakarya University, Dept. of Information Systems Engineering
+    org: Sakarya University — Dept. of Information Systems Engineering
     start: 2025-08-01
+    summary: |
+      Faculty of Computer and Information Sciences.
+      Courses: System Administration, Web Programming, Web Technologies,
+      Operating Systems, Cloud Computing, Blockchain Technologies and Applications.
   - role: Postdoc Researcher
     org: University of Iowa Hydroinformatics Lab
     start: 2023-09-01
     end: 2025-07-31
-  - role: Researcher
-    org: Sakarya University
-    start: 2018-01-01
+    summary: |
+      Hydroinformatics research with Prof. Ibrahim Demir.
+      Also collaborated with Industrial and Systems Engineering (Prof. Andrew Kusiak).
+  - role: Faculty Member (Lecturer / Research)
+    org: Sakarya University — Dept. of Information Systems Engineering
+    start: 2022-01-01
     end: 2023-08-31
+    summary: |
+      Courses: System Administration, Web Programming, Web Technologies,
+      Information Systems Infrastructure and Technologies, Cloud Computing.
+  - role: Software Developer & System Administrator
+    org: Sakarya University
+    start: 2012-01-01
+    end: 2022-12-31
+    summary: |
+      University Information Systems development (C#, ASP.NET Core).
+      Server infrastructure management (~100 servers, VMware, Proxmox).
+      Kubernetes cluster administration (Rancher). CI/CD (Jenkins, GitHub Actions).
+      IoT and RFID systems. Cloud-based distance education system (UZEP Project).
+  - role: Lecturer
+    org: Sakarya University
+    start: 2013-01-01
+    end: 2022-12-31
+    summary: |
+      Courses: System Administration, Web Programming, Web Technologies, Operating Systems.
+
+skills:
+  - name: Systems & Infrastructure
+    items:
+      - label: Kubernetes / Docker
+        level: 5
+      - label: Linux Administration
+        level: 5
+      - label: VMware / Proxmox
+        level: 4
+      - label: CI/CD (Jenkins, GitHub Actions)
+        level: 4
+  - name: Development
+    items:
+      - label: ASP.NET Core / C#
+        level: 5
+      - label: Web Development
+        level: 4
+      - label: IoT / Embedded Systems
+        level: 4
+      - label: RFID Systems
+        level: 3
+
+languages:
+  - name: Turkish
+    level: 5
+    label: Native
+  - name: English
+    level: 4
+    label: Advanced
