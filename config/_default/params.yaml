@@ -1,0 +1,68 @@
+hugoblox:
+  schema: "2.0"
+
+  identity:
+    name: "Baran Kaynak"
+    type: person
+    tagline: "Researcher & Postdoc"
+    description: "Academic CV of Baran Kaynak — Postdoc Researcher at University of Iowa Hydroinformatics Lab, specializing in Hydroinformatics, IoT, and Cloud Computing."
+    social:
+      twitter: ""
+
+  theme:
+    mode: system
+    pack: "default"
+    colors:
+      primary: "indigo"
+    layout:
+      radius: "md"
+      spacing: "spacious"
+      avatar_shape: circle
+
+  typography:
+    pack: "academic"
+
+  header:
+    enable: true
+    style: navbar
+    sticky: true
+    align: center
+    search: true
+    theme_toggle: true
+    theme_picker: false
+    language_switcher: false
+
+  footer:
+    style: minimal
+    text: ""
+
+  copyright:
+    notice: "© {year} {name}"
+    license:
+      type: cc
+      allow_derivatives: false
+      share_alike: true
+      allow_commercial: false
+
+  content:
+    math:
+      enable: false
+    toc:
+      enable: true
+    reading_time:
+      enable: false
+    citations:
+      style: apa
+
+  search:
+    enable: true
+
+  comments:
+    enable: false
+
+  analytics:
+    google:
+      measurement_id: ""
+
+  pro:
+    hide_attribution: false

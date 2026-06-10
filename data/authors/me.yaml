@@ -1,0 +1,58 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Baran Kaynak
+  given: Baran
+  family: Kaynak
+  alternate: ''
+  pronunciation: ''
+  pronouns: ''
+
+role: Postdoc Researcher
+bio: |
+  I am a Postdoc Researcher at the University of Iowa Hydroinformatics Lab.
+  My research focuses on Hydroinformatics, IoT-based environmental monitoring,
+  cloud computing, and distance education platforms.
+
+affiliations:
+  - name: University of Iowa Hydroinformatics Lab
+    url: https://hydroinformatics.uiowa.edu/
+
+links:
+  - icon: at-symbol
+    url: mailto:baran@kaynak.me
+    label: E-mail
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=_qZjF6MAAAAJ
+    label: Google Scholar
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/barankaynak/
+    label: LinkedIn
+
+interests:
+  - Hydroinformatics
+  - Internet of Things
+  - Cloud Computing
+  - Distance Education
+  - Web Technologies
+
+education:
+  - degree: PhD Computer Engineering
+    institution: Sakarya University
+    end: 2023-01-01
+  - degree: MSc Computer Engineering
+    institution: Sakarya University
+    end: 2018-01-01
+  - degree: BSc Computer Engineering
+    institution: Sakarya University
+    end: 2015-01-01
+
+experience:
+  - role: Postdoc Researcher
+    org: University of Iowa Hydroinformatics Lab
+    start: 2023-09-01
+  - role: Researcher
+    org: Sakarya University
+    start: 2018-01-01
+    end: 2023-08-31

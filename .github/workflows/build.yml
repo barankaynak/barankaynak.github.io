@@ -1,0 +1,116 @@
+name: Build
+
+env:
+  NODE_VERSION: '22'
+
+on:
+  pull_request:
+    branches: ['main']
+  workflow_call:
+    outputs:
+      artifact-id:
+        description: 'The ID of the uploaded artifact'
+        value: ${{ jobs.build.outputs.artifact-id }}
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      artifact-id: ${{ steps.upload.outputs.artifact-id }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+    - name: Setup pnpm
+      if: hashFiles('package.json') != ''
+      uses: pnpm/action-setup@v4
+
+    - name: Get Hugo Version
+      id: hugo-version
+      run: |
+        YQ_VERSION="v4.44.1"
+        wget -q -O /tmp/yq "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64"
+        sudo mv /tmp/yq /usr/local/bin/yq
+        sudo chmod +x /usr/local/bin/yq
+        VERSION=$(yq '.build.hugo_version // ""' hugoblox.yaml 2>/dev/null | grep -v '^null$' || true)
+        DEFAULT_VERSION="0.162.0"
+        VERSION=${VERSION:-$DEFAULT_VERSION}
+        echo "HUGO_VERSION=$VERSION" >> $GITHUB_ENV
+
+    - name: Install dependencies
+      run: |
+        if [ -f "package.json" ]; then
+          pnpm install --no-frozen-lockfile || npm install
+        fi
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: ${{ env.HUGO_VERSION }}
+        extended: true
+
+    - uses: actions/cache@v4
+      with:
+        path: |
+          /tmp/hugo_cache_runner/
+          node_modules/
+        key: ${{ runner.os }}-hugo-deps-${{ hashFiles('**/go.mod', '**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-hugo-deps-
+
+    - uses: actions/cache@v4
+      with:
+        path: resources/
+        key: ${{ runner.os }}-hugo-resources-${{ hashFiles('assets/**/*', 'config/**/*', 'hugo.yaml', 'hugoblox.yaml', 'package.json') }}
+        restore-keys: |
+          ${{ runner.os }}-hugo-resources-
+
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v4
+
+    - name: Build with Hugo
+      env:
+        HUGO_ENVIRONMENT: production
+      run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+    - name: Generate Pagefind search index
+      run: |
+        if [ -f "package.json" ] && grep -q "pagefind" package.json; then
+          pnpm run pagefind || npx pagefind --site "public"
+        fi
+
+    - name: Install StatiCrypt and encrypt private page
+      run: |
+        npm install -g staticrypt
+        if [ -f "public/private/index.html" ]; then
+          staticrypt public/private/index.html \
+            --password "${{ secrets.PRIVATE_PAGE_PASSWORD }}" \
+            --short \
+            -o public/private/index.html
+          echo "Private page encrypted."
+        else
+          echo "Warning: public/private/index.html not found, skipping encryption."
+        fi
+
+    - name: Upload artifact
+      id: upload
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./public
