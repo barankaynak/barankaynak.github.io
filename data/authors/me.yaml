@@ -9,15 +9,17 @@ name:
   pronunciation: ''
   pronouns: ''
 
-role: Postdoc Researcher
+role: Assistant Professor
 bio: |
-  I am a Postdoc Researcher at the University of Iowa Hydroinformatics Lab.
-  My research focuses on Hydroinformatics, IoT-based environmental monitoring,
-  cloud computing, and distance education platforms.
+  I am an Assistant Professor in the Department of Information Systems Engineering
+  at Sakarya University. Previously, I was a Postdoc Researcher at the
+  University of Iowa Hydroinformatics Lab (2023–2025). My research focuses on
+  Hydroinformatics, IoT-based environmental monitoring, cloud computing, and
+  distance education platforms.
 
 affiliations:
-  - name: University of Iowa Hydroinformatics Lab
-    url: https://hydroinformatics.uiowa.edu/
+  - name: Department of Information Systems Engineering, Sakarya University
+    url: https://www.sakarya.edu.tr/
 
 links:
   - icon: at-symbol
@@ -49,9 +51,13 @@ education:
     end: 2015-01-01
 
 experience:
+  - role: Assistant Professor
+    org: Sakarya University, Dept. of Information Systems Engineering
+    start: 2025-08-01
   - role: Postdoc Researcher
     org: University of Iowa Hydroinformatics Lab
     start: 2023-09-01
+    end: 2025-07-31
   - role: Researcher
     org: Sakarya University
     start: 2018-01-01

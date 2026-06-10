@@ -31,7 +31,9 @@ sections:
       title: '🔬 Research'
       subtitle: ''
       text: |-
-        I am a Postdoc Researcher at the [University of Iowa Hydroinformatics Lab](https://hydroinformatics.uiowa.edu/).
+        I am an Assistant Professor in the [Department of Information Systems Engineering](https://www.sakarya.edu.tr/)
+        at Sakarya University. Previously, I was a Postdoc Researcher at the
+        [University of Iowa Hydroinformatics Lab](https://hydroinformatics.uiowa.edu/) (2023–2025).
         My work sits at the intersection of **Hydroinformatics**, **IoT-based environmental monitoring**,
         and **web technologies for science communication**.
 

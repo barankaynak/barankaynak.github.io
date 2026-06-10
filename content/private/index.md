@@ -17,8 +17,11 @@ date: 2024-01-01
 
 ## Current Position
 
+**Assistant Professor** — Sakarya University, Dept. of Information Systems Engineering  
+*(Aug 2025 – present)*
+
 **Postdoc Researcher** — University of Iowa Hydroinformatics Lab  
-*(Sep 2023 – present)*
+*(Sep 2023 – Jul 2025)*
 
 ---
 
