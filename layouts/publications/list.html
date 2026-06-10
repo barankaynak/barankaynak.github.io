@@ -1,0 +1,179 @@
+{{- define "main" -}}
+<style>
+:root {
+  --pub-muted: #6b7280;
+  --pub-border: #e5e7eb;
+  --pub-pre-bg: #f9fafb;
+  --pub-pre-border: #e5e7eb;
+  --pub-pre-text: #374151;
+  --pub-copy-bg: #ffffff;
+  --pub-copy-border: #d1d5db;
+  --pub-copy-text: #6b7280;
+}
+html.dark {
+  --pub-muted: #9ca3af;
+  --pub-border: #374151;
+  --pub-pre-bg: #1f2937;
+  --pub-pre-border: #374151;
+  --pub-pre-text: #d1d5db;
+  --pub-copy-bg: #374151;
+  --pub-copy-border: #4b5563;
+  --pub-copy-text: #d1d5db;
+}
+.pub-list-page { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.25rem; }
+.pub-list-page h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.25rem; }
+.pub-total { color: var(--pub-muted); font-size: 0.875rem; margin-bottom: 2.5rem; }
+.pub-section { margin-bottom: 3rem; }
+.pub-section-title { font-size: 1.25rem; font-weight: 600; padding-bottom: 0.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid currentColor; display: flex; align-items: baseline; gap: 0.5rem; }
+.pub-section-count { font-weight: 400; font-size: 0.875rem; color: var(--pub-muted); }
+.pub-entry { display: flex; gap: 0.75rem; padding: 1.25rem 0; border-bottom: 1px solid var(--pub-border); }
+.pub-entry:last-child { border-bottom: none; }
+.pub-num { min-width: 2rem; text-align: right; font-size: 0.8rem; font-family: monospace; color: var(--pub-muted); padding-top: 0.15rem; flex-shrink: 0; }
+.pub-body { flex: 1; min-width: 0; }
+.pub-title { font-size: 0.95rem; font-weight: 600; line-height: 1.45; margin-bottom: 0.35rem; }
+.pub-title a { text-decoration: none; }
+.pub-title a:hover { text-decoration: underline; }
+.pub-authors { font-size: 0.85rem; color: var(--pub-muted); margin-bottom: 0.2rem; }
+.pub-venue { font-size: 0.85rem; font-style: italic; color: var(--pub-muted); margin-bottom: 0.6rem; }
+.pub-actions { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+.pub-btn { display: inline-block; padding: 0.175rem 0.6rem; font-size: 0.73rem; font-weight: 500; border-radius: 9999px; text-decoration: none; cursor: pointer; border: none; line-height: 1.6; font-family: inherit; transition: opacity 0.15s; }
+.pub-btn:hover { opacity: 0.75; }
+.btn-read { background: #dbeafe; color: #1d4ed8; }
+.btn-pdf  { background: #fee2e2; color: #b91c1c; }
+.btn-link { background: #dcfce7; color: #15803d; }
+.btn-cite { background: #f3f4f6; color: #374151; }
+html.dark .btn-read { background: #1e3a5f; color: #93c5fd; }
+html.dark .btn-pdf  { background: #450a0a; color: #fca5a5; }
+html.dark .btn-link { background: #14532d; color: #86efac; }
+html.dark .btn-cite { background: #374151; color: #d1d5db; }
+.cite-block { margin-top: 0.75rem; }
+.cite-pre-wrap { position: relative; }
+.cite-pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.73rem;
+  background: var(--pub-pre-bg);
+  border: 1px solid var(--pub-pre-border);
+  color: var(--pub-pre-text);
+  border-radius: 0.375rem;
+  padding: 0.75rem 4rem 0.75rem 0.75rem;
+  overflow-x: auto;
+  white-space: pre;
+  margin: 0;
+  line-height: 1.6;
+}
+.cite-copy-btn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.7rem;
+  font-family: inherit;
+  background: var(--pub-copy-bg);
+  border: 1px solid var(--pub-copy-border);
+  color: var(--pub-copy-text);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.cite-copy-btn:hover { opacity: 0.75; }
+</style>
+
+<div class="pub-list-page">
+  <h1>Publications</h1>
+  <p class="pub-total">{{ len .Pages }} publications</p>
+
+  {{ $journals    := where .Pages "Params.publication_types" "intersect" (slice "article-journal") }}
+  {{ $conferences := where .Pages "Params.publication_types" "intersect" (slice "paper-conference") }}
+
+  {{ if $journals }}
+  <section class="pub-section">
+    <h2 class="pub-section-title">Journal Articles <span class="pub-section-count">({{ len $journals }})</span></h2>
+    {{ $sorted := sort $journals "Date" "desc" }}
+    {{ $total  := len $sorted }}
+    {{ range $i, $p := $sorted }}
+      {{ template "pub-entry" (dict "p" $p "num" (sub $total $i)) }}
+    {{ end }}
+  </section>
+  {{ end }}
+
+  {{ if $conferences }}
+  <section class="pub-section">
+    <h2 class="pub-section-title">Conference Papers <span class="pub-section-count">({{ len $conferences }})</span></h2>
+    {{ $sorted := sort $conferences "Date" "desc" }}
+    {{ $total  := len $sorted }}
+    {{ range $i, $p := $sorted }}
+      {{ template "pub-entry" (dict "p" $p "num" (sub $total $i)) }}
+    {{ end }}
+  </section>
+  {{ end }}
+</div>
+
+<script>
+function toggleCite(id) {
+  var el = document.getElementById(id);
+  if (el) { el.style.display = el.style.display === 'block' ? 'none' : 'block'; }
+}
+function copyBibtex(preId, btnId) {
+  var pre = document.getElementById(preId);
+  var btn = document.getElementById(btnId);
+  if (!pre || !btn) return;
+  var text = pre.textContent.trim();
+  var done = function() { btn.textContent = 'Copied!'; setTimeout(function() { btn.textContent = 'Copy'; }, 2000); };
+  if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done); }
+  else { var ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done(); }
+}
+</script>
+{{- end -}}
+
+{{- define "pub-entry" -}}
+{{- $p   := .p -}}
+{{- $num := .num -}}
+{{- $doi := "" -}}
+{{- with $p.Params.hugoblox -}}{{- with .ids -}}{{- with .doi -}}{{- $doi = . -}}{{- end -}}{{- end -}}{{- end -}}
+{{- $key := printf "pub-%s" $p.File.ContentBaseName -}}
+<div class="pub-entry">
+  <span class="pub-num">{{ $num }}.</span>
+  <div class="pub-body">
+    <div class="pub-title">
+      {{- if $doi -}}
+      <a href="https://doi.org/{{ $doi }}" target="_blank" rel="noopener noreferrer">{{ $p.Title }}</a>
+      {{- else -}}
+      {{ $p.Title }}
+      {{- end -}}
+    </div>
+    <div class="pub-authors">
+      {{- $parts := slice -}}
+      {{- range $p.Params.authors -}}
+        {{- if eq . "me" -}}
+          {{- $parts = $parts | append "<strong>B. Kaynak</strong>" -}}
+        {{- else -}}
+          {{- $parts = $parts | append . -}}
+        {{- end -}}
+      {{- end -}}
+      {{- delimit $parts ", " | safeHTML -}}
+    </div>
+    <div class="pub-venue">
+      {{- with $p.Params.publication -}}{{ .name }}{{- end -}}{{- with $p.Date -}}, {{ .Year }}{{- end -}}
+    </div>
+    <div class="pub-actions">
+      {{- if $doi -}}
+      <a href="https://doi.org/{{ $doi }}" target="_blank" rel="noopener noreferrer" class="pub-btn btn-read">Read</a>
+      {{- end -}}
+      {{- range $p.Params.links -}}
+        {{- if eq .type "pdf" -}}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="pub-btn btn-pdf">PDF</a>{{- end -}}
+        {{- if eq .type "site" -}}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="pub-btn btn-link">View</a>{{- end -}}
+      {{- end -}}
+      {{- with $p.Params.bibtex -}}
+      <button class="pub-btn btn-cite" onclick="toggleCite('{{ $key }}-cite')">Cite</button>
+      {{- end -}}
+    </div>
+    {{- with $p.Params.bibtex -}}
+    <div id="{{ $key }}-cite" style="display:none" class="cite-block">
+      <div class="cite-pre-wrap">
+        <pre id="{{ $key }}-pre" class="cite-pre">{{- . | safeHTML -}}</pre>
+        <button id="{{ $key }}-copy" class="cite-copy-btn" onclick="copyBibtex('{{ $key }}-pre','{{ $key }}-copy')">Copy</button>
+      </div>
+    </div>
+    {{- end -}}
+  </div>
+</div>
+{{- end -}}

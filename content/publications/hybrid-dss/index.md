@@ -13,6 +13,14 @@ hugoblox:
   ids:
     doi: "10.1007/s13369-024-09641-y"
 featured: false
+bibtex: |
+  @article{kaynak2024hybriddss,
+    author  = {Kaynak, S{\"u}meyye and Kaynak, Baran and Uygun, {\"O}zer},
+    title   = {A Hybrid Decision Support System for the Resource Allocation Problem in Cloud Manufacturing Platforms},
+    journal = {Arabian Journal for Science and Engineering},
+    year    = {2024},
+    doi     = {10.1007/s13369-024-09641-y}
+  }
 tags:
   - Cloud Manufacturing
   - AHP

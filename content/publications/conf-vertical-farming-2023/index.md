@@ -11,6 +11,13 @@ publication_types: ["paper-conference"]
 publication:
   name: "AGROSYM 2023 — XIV International Agriculture Symposium"
 featured: false
+bibtex: |
+  @inproceedings{cokren2023farming,
+    author    = {{\c{C}}\"okren, Hamid As{\i}m and Kaynak, Baran and {\c{S}}in, Bahad{\i}r and {\c{C}}elebi, Numan},
+    title     = {Controlled-Environment Vertical Farming In Ornamental Plant Production And Application Of A Decision Support System: The Example Of Hybrid African Violet},
+    booktitle = {AGROSYM 2023 -- XIV International Agriculture Symposium},
+    year      = {2023}
+  }
 tags:
   - Controlled-Environment Agriculture
   - Vertical Farming

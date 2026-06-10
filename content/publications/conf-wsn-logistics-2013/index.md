@@ -12,6 +12,13 @@ publication_types: ["paper-conference"]
 publication:
   name: "EuroTecS-2013 — European Conference in Technology and Society"
 featured: false
+bibtex: |
+  @inproceedings{kaynak2013wsn,
+    author    = {Kaynak, Baran and Selvi, {\.I}hsan Hakan and {\c{S}}en, S{\"u}meyye and Torkul, Orhan and Cedimo\u{g}lu, {\.I}. Hakk{\i}},
+    title     = {Integrated Wireless Sensor Network Structure In Manufacturing Logistics},
+    booktitle = {EuroTecS-2013 -- European Conference in Technology and Society},
+    year      = {2013}
+  }
 tags:
   - Wireless Sensor Networks
   - Manufacturing Logistics

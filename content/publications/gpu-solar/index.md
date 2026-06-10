@@ -13,6 +13,14 @@ hugoblox:
   ids:
     doi: "10.1109/ACCESS.2020.2978590"
 featured: false
+bibtex: |
+  @article{kaynak2020gpusolar,
+    author  = {Kaynak, S{\"u}meyye and Kaynak, Baran and {\"O}zmen, Ahmet},
+    title   = {GPU-Based Dynamic Solar Potential Estimation Tool Using 3D Plans},
+    journal = {IEEE Access},
+    year    = {2020},
+    doi     = {10.1109/ACCESS.2020.2978590}
+  }
 tags:
   - Solar Potential Analysis
   - GPU

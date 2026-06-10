@@ -13,6 +13,14 @@ hugoblox:
   ids:
     doi: "10.1109/ACCESS.2019.2962232"
 featured: false
+bibtex: |
+  @article{kaynak2019blockchain,
+    author  = {Kaynak, Baran and Kaynak, S{\"u}meyye and Uygun, {\"O}zer},
+    title   = {Cloud manufacturing architecture based on public blockchain technology},
+    journal = {IEEE Access},
+    year    = {2019},
+    doi     = {10.1109/ACCESS.2019.2962232}
+  }
 tags:
   - Blockchain
   - Cloud Manufacturing

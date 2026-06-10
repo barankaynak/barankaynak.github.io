@@ -10,6 +10,13 @@ publication_types: ["paper-conference"]
 publication:
   name: "IMSS 2019 — 10th International Symposium on Intelligent Manufacturing and Service Systems"
 featured: false
+bibtex: |
+  @inproceedings{kaynak2019blockchainconf,
+    author    = {Kaynak, Baran and Kaynak, S{\"u}meyye and Uygun, {\"O}zer},
+    title     = {Blockchain Technology in Cloud Manufacturing},
+    booktitle = {IMSS 2019 -- 10th International Symposium on Intelligent Manufacturing and Service Systems},
+    year      = {2019}
+  }
 tags:
   - Cloud Manufacturing
   - Blockchain

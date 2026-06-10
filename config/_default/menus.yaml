@@ -3,7 +3,7 @@ main:
     url: /
     weight: 10
   - name: Publications
-    url: /#papers
+    url: /publications/
     weight: 20
   - name: Projects
     url: /projects/
