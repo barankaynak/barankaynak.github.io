@@ -10,7 +10,9 @@ publishDate: "2025-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "Environmental Monitoring and Assessment"
-doi: "10.1007/s10661-025-13812-1"
+hugoblox:
+  ids:
+    doi: "10.1007/s10661-025-13812-1"
 featured: false
 tags:
   - Hydrological Monitoring
@@ -18,5 +20,4 @@ tags:
   - Environmental Data
   - Real-Time Monitoring
   - STEM Education
-  - Data Visualization
 ---

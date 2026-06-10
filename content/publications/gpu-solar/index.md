@@ -9,7 +9,9 @@ publishDate: "2020-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "IEEE Access"
-doi: "10.1109/ACCESS.2020.2978590"
+hugoblox:
+  ids:
+    doi: "10.1109/ACCESS.2020.2978590"
 featured: false
 tags:
   - Solar Potential Analysis

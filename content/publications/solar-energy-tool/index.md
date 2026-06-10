@@ -9,7 +9,9 @@ publishDate: "2018-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "Energy and Buildings"
-doi: "10.1016/j.enbuild.2017.12.033"
+hugoblox:
+  ids:
+    doi: "10.1016/j.enbuild.2017.12.033"
 featured: false
 tags:
   - 3D City Model

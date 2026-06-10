@@ -9,7 +9,9 @@ publishDate: "2024-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "Arabian Journal for Science and Engineering"
-doi: "10.1007/s13369-024-09641-y"
+hugoblox:
+  ids:
+    doi: "10.1007/s13369-024-09641-y"
 featured: false
 tags:
   - Cloud Manufacturing

@@ -9,7 +9,9 @@ publishDate: "2019-01-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication:
   name: "IEEE Access"
-doi: "10.1109/ACCESS.2019.2962232"
+hugoblox:
+  ids:
+    doi: "10.1109/ACCESS.2019.2962232"
 featured: false
 tags:
   - Blockchain
